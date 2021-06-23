@@ -1,9 +1,11 @@
 using System;
 using System.Threading;
+using System.IO;
+
 
 namespace dev_homework08{
 
-    class Juego{
+    public class Juego{
 
         public string[,] Tablero {get;set;}
         public int Puntuacion {get;set;}
