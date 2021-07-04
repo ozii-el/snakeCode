@@ -20,15 +20,15 @@ namespace dev_homework08
         public int _x { get; set; }
         public int _y { get; set; }
 
-         string _caracter = "🐌 ";
+         string _caracter = "~";
 
         public Juego()
         {
             
             _vivora = _caracter;
             _velociad = 1000;
-            _tamañoX = 50;
-            _tamañoY = 20;
+            _tamañoX = 80;
+            _tamañoY = 30;
             _x = (_tamañoX / 2) - 1;
             _y = (_tamañoY / 2) - 1;
         }
@@ -37,9 +37,9 @@ namespace dev_homework08
         {
             Console.Clear();
             Console.CursorVisible = false;
-            Console.WriteLine("Bienvenido a mis pininos");
+            Console.WriteLine("Snake 2099");
 
-            Console.WriteLine($"Voy a dibunar el tablero de {_tamañoX} {_tamañoY}, persiona enter para continuar.");
+            Console.WriteLine($"Presiona enter para continuar.");
             Console.ReadLine();
             Console.Clear();
             DibujaTablero();
@@ -83,7 +83,7 @@ namespace dev_homework08
         public void PintarComida(int x , int y)
         {
             
-            EscribeEn("🍕",x , y);
+            EscribeEn("+",x , y);
              Thread.Sleep(_velociad);
         }
 
@@ -113,7 +113,7 @@ namespace dev_homework08
 
         public void DibujaTablero()
         {
-            string titulo = "Mi Sanake v0.1";
+            string titulo = "Snake 2099";
 
             EscribeEn(titulo, (_tamañoX / 2) - (titulo.Length / 2), 0);
             for (int x = 0; x < _tamañoX; x++)

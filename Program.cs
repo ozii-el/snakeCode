@@ -13,18 +13,11 @@ namespace dev_homework08
             Console.Clear();
             Usuario[] resultTxt = Perfil.LeerDatosTexto();
             Perfil.ImprimirTituloSeccion("Archivo texto");
-           Perfil.ImprimirDatos(resultTxt);
+            Perfil.ImprimirDatos(resultTxt);
 
             Usuario[] resultJson = Perfil.LeerDatosJson();
             Perfil.ImprimirTituloSeccion("Archivo json");
             Perfil.ImprimirDatos(resultJson);
-
-          /*  Usuario nuevoUsuario = new Usuario();
-            nuevoUsuario.Apodo = "Cesarin";
-            nuevoUsuario.Nombre = "Cesar Vivo";
-            nuevoUsuario.FechaDeNacimiento = new DateTime(2020,10,18);
-
-            Perfil.GuardarUsuario(nuevoUsuario);*/
 
             resultTxt = Perfil.LeerDatosTexto();
             Perfil.ImprimirTituloSeccion("Archivo texto 2");
@@ -51,7 +44,7 @@ namespace dev_homework08
                 }
                
                 Console.WriteLine("\n");
-                Console.WriteLine("Debes presionar las teclas   ⬅️   ⬆️   ⬇️   ➡️  para moverte"); 
+                Console.WriteLine("Debes presionar las teclas   ←   ↑   ↓   →  para moverte"); 
                 bool seguir = true;
 
                 while(seguir){
@@ -66,20 +59,20 @@ namespace dev_homework08
                                 break;
                             case ConsoleKey.UpArrow:
                                 Console.ForegroundColor = ConsoleColor.DarkYellow;
-                                ImprimirMensaje("Arriba ⬆️");
+                                ImprimirMensaje("Arriba ↑");
                                 break;
                             case ConsoleKey.DownArrow:
                             Console.ForegroundColor = ConsoleColor.DarkMagenta;
-                                ImprimirMensaje("Abajo ⬇️");
+                                ImprimirMensaje("Abajo ↓");
                                 break;
                             case ConsoleKey.LeftArrow:
                             Console.ForegroundColor = ConsoleColor.DarkGray;
-                                ImprimirMensaje("Izquierda  ⬅️ ");
+                                ImprimirMensaje("Izquierda  ← ");
                                 Console.ForegroundColor = ConsoleColor.DarkGreen;
                                 break;
                             case ConsoleKey.RightArrow:
                             Console.ForegroundColor = ConsoleColor.DarkBlue;
-                                ImprimirMensaje("Derecha ➡️");
+                                ImprimirMensaje("Derecha →");
                                 break;
                             default:
                             Console.ForegroundColor = ConsoleColor.DarkRed;
